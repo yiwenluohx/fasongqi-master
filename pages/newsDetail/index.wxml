@@ -1,0 +1,19 @@
+<!--mine.wxml-->
+<view class="detailContent">
+<!-- <view class="empty"></view>
+  <image class="bg" src="/static/newDetailBg.png" mode=""/>
+  <view class="detailCont">
+    {{detail.desc}}
+  </view> -->
+  <view class="detailBox">
+    <view class="title">{{detail.title}}</view>
+    <view class="other">
+      <text class="classify">分类：{{detail.caseClassify}}</text>
+      <text>时间：{{detail.completedDate}}</text>
+    </view>
+    <view class="descBox">
+      <rich-text nodes="{{desc}}"></rich-text>
+    </view>
+  </view>
+  <!-- <view class="button" bind:tap="attentionClick">关注此案例</view> -->
+</view>

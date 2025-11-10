@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="templateDownload">
+    <view class="searchBox">
+        <view class="search">
+            <input type="text" placeholder="请输入文档名称" value="{{docName}}" bindconfirm="searchHandle"/>
+            <image src="/static/search.png" mode=""/>
+        </view>
+        <view class="typeBox">
+            <picker bindchange="bindTypeChange" value="{{typeIndex}}" range-key="itemName" range="{{typeList}}">
+                <view class="picker" wx:if="{{typeIndex!=''}}">
+                    <text class="name">{{typeList[typeIndex].itemName}}</text>
+                    <text class="triangledownfill"></text>
+                </view>
+                <view class="picker" wx:else>
+                    <text class="name">文档类型</text>
+                    <text class="triangledownfill"></text>
+                </view>
+            </picker>
+        </view>
+        <view class="industryBox">
+            <picker bindchange="bindIndustryChange" value="{{industryIndex}}" range-key="itemName" range="{{industryList}}">
+                <view class="picker" wx:if="{{industryIndex!=''}}">
+                    <text class="name">{{industryList[industryIndex].itemName}}</text>
+                    <text class="triangledownfill"></text>
+                </view>
+                <view class="picker" wx:else>
+                    <text class="name">行业领域</text>
+                    <text class="triangledownfill"></text>
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view class="listBox">
+        <view class="noData" style="display: flex;align-items: center;justify-content: center;width: 100%;" wx:if="{{total < 1}}">
+            <text style="display: block;margin: auto;text-align: center;">暂无数据~</text>
+        </view>
+        <block wx:else>
+            <view class="itemBox" wx:for="{{list}}" wx:key="index" bind:tap="itemClick" data-id="{{item.templateId}}">
+                <view class="topDocBox">
+                    <image src="{{base+item.image}}" mode="widthFix" />
+                    <view class="downloadBtn">下载文档</view>
+                </view>
+                <view class="botInfos">
+                    <view class="docName">{{item.templateName}}</view>
+                    <text>类型：{{item.contractTypeText}}</text>
+                    <text>行业：{{item.industryTypeText}}</text>
+                    <view class="others">
+                        <text>{{item.price}}</text>
+                        <text>{{item.downLoadNum}}次下载</text>
+                    </view>
+                </view>
+            </view>
+            <view class="moreText">{{moreTxt}}</view>
+        </block>
+    </view>
+</view>

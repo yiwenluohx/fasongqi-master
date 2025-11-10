@@ -1,0 +1,23 @@
+<!--mine.wxml-->
+<view class="listContent">
+  <view class="noData" style="display: flex;align-items: center;justify-content: center;height: 100vh;" wx:if="{{total < 1}}">
+    <text style="display: block;margin: auto;text-align: center;">暂无数据~</text>
+  </view>
+  <block wx:else>
+    <view class="itemBox" wx:for="{{list}}" wx:key="taskId" bind:tap="toDetail" data-id="{{item.taskId}}" data-title="{{item.taskName}}" data-status="{{item.status}}">
+        <view class="item">
+            服务名称：{{item.taskName}}
+        </view>
+        <view class="item">
+            服务类型：{{item.serverTypeText}}
+        </view>
+        <view class="item">
+            服务状态：{{item.statusText}}
+        </view>
+        <view class="item">
+            服务完成时间：{{item.completedDate}}
+        </view>
+    </view>
+    <view class="moreText">{{moreTxt}}</view>
+  </block>
+</view>

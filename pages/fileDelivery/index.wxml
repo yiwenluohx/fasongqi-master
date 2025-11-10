@@ -1,0 +1,23 @@
+<!--mine.wxml-->
+<view class="fileDelivery">
+  <view class="noData" style="display: flex;align-items: center;justify-content: center;height: 100vh;" wx:if="{{total < 1}}">
+    <text style="display: block;margin: auto;text-align: center;">暂无数据~</text>
+  </view>
+  <block wx:else>
+    <view class="fileItem" wx:for="{{list}}" wx:key="taskId" bind:tap="toFileDetail" data-id="{{item.taskId}}" data-title="{{item.taskName}}" data-status="{{item.status}}">
+        <view class="item">
+            租房合同：{{item.taskName}}
+        </view>
+        <view class="item">
+            处理时间：{{item.createTime}}
+        </view>
+        <view class="item desc">
+            <text>描述：</text>
+            <view class="intros">
+                {{item.taskDesc}}
+            </view>
+        </view>
+    </view>
+    <view class="moreText">{{moreTxt}}</view>
+  </block>
+</view>

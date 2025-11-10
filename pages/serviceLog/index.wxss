@@ -1,0 +1,18 @@
+/**index.wxss**/
+.listContent {
+  min-height: 100vh;
+  background: #F5F7FA;
+  padding: 30rpx 0 0;
+  box-sizing: border-box;
+}
+.itemBox{
+    font-size: 28rpx;
+    color: #586471;
+    background: #fff;
+    padding: 30rpx;
+    box-sizing: border-box;
+    margin-bottom: 30rpx;
+}
+.itemBox .item{
+    line-height: 48rpx;
+}

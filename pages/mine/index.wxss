@@ -1,0 +1,180 @@
+/**index.wxss**/
+.mine {
+  min-height: 100vh;
+  background: #F5F7FA;
+}
+.top_user{
+  width: 100%;
+  background: #fff;
+  padding: 32rpx 48rpx 32rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content:space-between;
+}
+.left{
+  display: flex;
+}
+.left .head{
+  width: 114rpx;
+  height: 114rpx;
+  margin-right: 21rpx;
+  border-radius: 50%;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info .names{
+  font-weight: 800;
+  font-size: 30rpx;
+  color: #293D53;
+  margin-bottom: 18rpx;
+  display: flex;
+  align-items: center;
+}
+.info .names image{
+  width: 97rpx;
+  height: 34rpx;
+  margin-left: 19rpx;
+}
+.info .phone{
+  display: flex;
+  align-items: center;
+  width: auto;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+.info .phone image{
+  width: 20rpx;
+  height: 26rpx;
+  margin-right: 11rpx;
+}
+.info .phone text{
+  font-size: 24rpx;
+  color: #586471;
+}
+.sign image{
+  width: 131rpx;
+  height: 100rpx;
+}
+
+.openVip{
+  width: 100%;
+  padding: 14rpx 0 40rpx;
+  box-sizing: border-box;
+  background: linear-gradient(0deg, #F5F7FA 0%, #FFFFFF 100%);
+}
+.openVip image{
+  width: 694rpx;
+  height: 134rpx;
+  margin: auto;
+  display: block;
+}
+
+.contents{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.content1,.content2{
+  background: #fff;
+  padding: 0 30rpx;
+  line-height: 87rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+}
+.cont {
+  border-bottom: 1px solid #E4EAF2;
+}
+.btnCont{
+  background-color: #fff;
+  color: #293D53;
+  line-height: 87rpx;
+  border-bottom: 1px solid #E4EAF2;
+  width: 635rpx !important;
+  font-size: medium;
+  text-align: left;
+}
+
+.content1 .cont image{
+  width: 23rpx;
+  height: 27rpx;
+  margin-right: 20rpx;
+}
+.content1 :nth-child(2) image{
+  width: 26rpx;
+  height: 24rpx;
+  margin-right: 18rpx;
+}
+.content1 :nth-child(3) image{
+  width: 29rpx;
+  height: 25rpx;
+  margin-right: 17rpx;
+}
+.content1 :last-child,.content2 :last-child{
+  border-bottom: 0;
+}
+.content2 .cont image, .content2 .btnCont image{
+  width: 30rpx;
+  height: 28rpx;
+  margin-right: 16rpx;
+}
+.content2 :nth-child(2) image{
+  width: 27rpx;
+  height: 26rpx;
+}
+
+.authPhoneModal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    left: 0;
+    top: 0;
+    z-index: 9;
+}
+.bindPhoneCont{
+    width: 90%;
+    height: 300rpx;
+    background: #F5F7FA;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20rpx;
+}
+.bindPhoneCont .titlebox{
+    line-height: 98rpx;
+    font-size: 32rpx;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    border-radius: 20rpx 20rpx 0 0;
+    color: #586471;
+}
+.bindPhoneCont .bindBox{
+    margin: 66rpx;
+}
+.bindBox{
+    display: flex;
+    justify-content: center;
+}
+.bindPhoneBox{
+    width: 50%;
+    height: 68rpx;
+    background: #39b54a;
+    text-align: center;
+    font-size: 24rpx;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bindPhoneBox image{
+    width: 28rpx;
+    height: 26rpx;
+    margin-right: 11rpx;
+}

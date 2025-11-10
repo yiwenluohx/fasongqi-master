@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="listContent">
+  <view class="noData" style="display: flex;align-items: center;justify-content: center;height: 100vh;" wx:if="{{total < 1}}">
+    <text style="display: block;margin: auto;text-align: center;">暂无数据~</text>
+  </view>
+  <block wx:else>
+    <view class="container">
+        <view class="listBox" wx:for="{{list}}" wx:key="id" bind:tap="itemClick" data-id="{{item.caseId}}">
+            <view class="left">
+                <view class="title">
+                    {{item.title}}
+                </view>
+                <view class="time">
+                    {{item.completedDate}} · {{item.readCount}}阅读
+                </view>
+            </view>
+            <view class="cover">
+                <image src="{{item.image}}" mode=""/>
+            </view>
+        </view>
+    </view>
+    <view class="moreText">{{moreTxt}}</view>
+  </block>
+  
+</view>

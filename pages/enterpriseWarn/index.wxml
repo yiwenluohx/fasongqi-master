@@ -1,0 +1,61 @@
+<form>
+  <view class="text-bold padding bg-white">
+    企业合规拟定
+  </view>
+  <view class="cu-form-group ">
+    <view class="title">所属行业:</view>
+    <picker bindchange="bindIndustryChange" value="{{industryIndex}}" range-key="itemName" range="{{industryList}}">
+      <view class="picker">
+        {{industryDefault}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group ">
+    <view class="title">企业合规类型:</view>
+    <picker bindchange="bindTypeChange" value="{{typeIndex}}" range-key="itemName" range="{{typeList}}">
+      <view class="picker">
+        {{typeDefault}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group margin-top">
+    <textarea maxlength="-1" bindinput="backgroundInput" placeholder="企业背景"></textarea>
+  </view>
+
+  <view class="cu-form-group margin-top">
+    <textarea maxlength="-1" bindinput="textareaAInput" placeholder="委托方及特别需求"></textarea>
+  </view>
+  <view class="cu-bar bg-white margin-top">
+    <view class="action">
+      图片上传
+    </view>
+    <!-- <view class="action">
+      {{imgList.length}}/4
+    </view> -->
+  </view>
+  <view class="cu-form-group">
+    <view class="grid col-4 grid-square flex-sub">
+      <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+        <image src='{{imgList[index]}}' mode='aspectFill'></image>
+        <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+          <text class="cuIcon-close"></text>
+        </view>
+      </view>
+      <view class="solids" bindtap="chooseImageWithConfirmation">
+        <text class="cuIcon-cameraadd"></text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">合规文件</view>
+    <input placeholder="上传需要审查的合同" name="input" value="{{fileName}}"></input>
+    <button class='cu-btn bg-green shadow' style="width:80px" bindtap="doUploadFile">上传</button>
+  </view>
+
+</form>
+<view class=" text-center margin-top">
+  <view>
+    <button class="cu-btn   bg-blue " bindtap="doSubmit">提交</button>
+  </view>
+
+</view>

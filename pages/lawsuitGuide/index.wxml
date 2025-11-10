@@ -1,0 +1,100 @@
+<!--pages/index/suliuc.wxml-->
+<view class="lawsuitGuidePage">
+    <view class="tab">
+        <view data-i="{{0}}" bindtap="setTabIndex" class="{{activeIndex===0?'active':''}}">
+            {{numList[0].title}}
+        </view>
+        <view data-i="{{1}}" bindtap="setTabIndex" class="{{activeIndex===1?'active':''}}">{{numList[1].title}}</view>
+        <view data-i="{{2}}" bindtap="setTabIndex" class="{{activeIndex===2?'active':''}}">{{numList[2].title}}</view>
+        <view data-i="{{3}}" bindtap="setTabIndex" class="{{activeIndex===3?'active':''}}">{{numList[3].title}}</view>
+    </view>
+    <view wx:if="{{activeIndex===0}}">
+        <view class='Page'>
+            <view class="stepBox">
+                <view class="box">
+                    <view class="{{index == numList.length-1 ? 'sigleStep' : 'greenSigleStep'}}" wx:for="{{numList[0].children}}" wx:for-item="item" wx:key="{{item.key}}">
+                        <view class="view_item">
+                            <icon id="icon" class="cuIcon-roundcheck" size="16" />
+                        </view>
+                        <view class="stepConBox" style="color:#000;">
+                            <view id="timebox" class="{{currentIndex == item.key ? 'activea' : 'activeb'}}" data-key='{{item.key}}' bindtap="shghnn">{{item.title}}</view>
+                            <!--timebox  -->
+                            <view>
+                                <view class="timeboxa" hidden="{{activeKey != item.key}}">
+                                    <view class="kl" wx:for="{{item.text}}" wx:for-item="item1">
+                                        {{item1}}
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{activeIndex===1}}">
+        <view class='Page'>
+            <view class="stepBox">
+                <view class="box">
+                    <view class="{{index == numList[1].children.length-1 ? 'sigleStep' : 'greenSigleStep'}}" wx:for="{{numList[1].children}}" wx:for-item="item" wx:key="{{item.key}}">
+                        <view class="view_item">
+                            <icon id="icon" class="cuIcon-roundcheck" size="16" />
+                        </view>
+                        <view class="stepConBox" style="color:#00cf3e;">
+                            <view id="timebox" class="{{currentIndex == item.key ? 'activea' : 'activeb'}}" data-key='{{item.key}}' bindtap="shghnn">{{item.title}}</view>
+                            <view>
+                                <view class="timeboxa" hidden="{{activeKey != item.key}}">{{ item.text }}</view>
+                                <!-- <view class="timeboxa" hidden="">{{ item.key }}{{ item.text }}</view> -->
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{activeIndex===2}}">
+        <view class='Page'>
+            <view class="stepBox">
+                <view class="box">
+                    <view class="{{index == numList[2].children.length-1 ? 'sigleStep' : 'greenSigleStep'}}" wx:for="{{numList[2].children}}" wx:for-item="item" wx:key="{{item.key}}">
+                        <view class="view_item">
+                            <icon id="icon" class="cuIcon-roundcheck" size="16" />
+                        </view>
+                        <view class="stepConBox" style="color:#00cf3e;">
+                            <view id="timebox" class="{{currentIndex == item.key ? 'activea' : 'activeb'}}" data-key='{{item.key}}' bindtap="shghnn">{{item.title}}</view>
+                            <view>
+                                <view class="timeboxa" hidden="{{activeKey != item.key}}">{{ item.text }}</view>
+                                <!-- <view class="timeboxa" hidden="">{{ item.key }}{{ item.text }}</view> -->
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{activeIndex===3}}">
+        <view class='Page'>
+            <view class="stepBox">
+                <view class="box">
+                    <view class="{{index == numList[3].children.length-1? 'sigleStep' : 'greenSigleStep'}}" wx:for="{{numList[3].children}}" wx:for-item="item" wx:key="{{item.key}}">
+                        <view class="view_item">
+                            <icon id="icon" class="cuIcon-roundcheck" size="16" />
+                        </view>
+                        <view class="stepConBox" style="color:#00cf3e;">
+                            <view id="timebox" class="{{currentIndex == item.key ? 'activea' : 'activeb'}}" data-key='{{item.key}}' bindtap="shghnn">{{item.title}}</view>
+                            <view>
+                                <view class="timeboxa" hidden="{{activeKey != item.key}}">
+                                    <view wx:for="{{item.text}}" wx:for-item="item1">
+                                        {{item1}}
+                                    </view>
+                                </view>
+
+                                <!-- <view class="timeboxa" hidden="">{{ item.key }}{{ item.text }}</view> -->
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

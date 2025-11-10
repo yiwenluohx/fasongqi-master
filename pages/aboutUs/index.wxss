@@ -1,0 +1,30 @@
+/**index.wxss**/
+.aboutUs {
+  min-height: 100vh;
+  background: #F5F7FA;
+  padding: 30rpx 0 0;
+  box-sizing: border-box;
+}
+.logo{
+  width: 100%;
+  background: #fff;
+  text-align: center;
+}
+.logo image{
+  width: 132rpx;
+  height: 132rpx;
+  margin: 50rpx auto 18rpx;
+}
+.logo text{
+  font-size: 30rpx;
+  color: #293D53;
+  display: block;
+}
+.intros{
+  font-size: 28rpx;
+  color: #586471;
+  line-height: 50rpx;
+  background: #fff;
+  padding: 0 37rpx 20rpx;
+  box-sizing: border-box;
+}

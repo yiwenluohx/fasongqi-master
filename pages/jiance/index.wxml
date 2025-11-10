@@ -1,0 +1,30 @@
+<!--mine.wxml-->
+<!-- <view class="aboutUs">
+    <web-view src="{{src}}"></web-view>
+</view> -->
+<form>
+    <view class="text-bold padding bg-white">
+        品牌侵权检测
+    </view>
+    <view class="cu-form-group ">
+        <view class="title">公司名称:</view>
+        <input placeholder="请填写公司名称" name="input" value="{{companyName}}" bindinput="companyInput"></input>
+    </view>
+    <view class="cu-form-group ">
+        <view class="title">联系人:</view>
+        <input placeholder="请填写联系人" name="input" value="{{needVerifyPerson}}" bindinput="linkManInput"></input>
+    </view>
+    <view class="cu-form-group">
+        <view class="title">手机号码:</view>
+        <input placeholder="请填写手机号码" name="input" value="{{mobile}}" bindinput="mobileInput"></input>
+    </view>
+
+    <view class="cu-form-group margin-top">
+        <textarea maxlength="-1" bindinput="textareaAInput" placeholder="请填写检测内容"></textarea>
+    </view>
+</form>
+<view class=" text-center margin-top">
+    <view>
+        <button class="cu-btn   bg-blue " bindtap="doSubmit">提交</button>
+    </view>
+</view>

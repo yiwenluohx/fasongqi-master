@@ -1,0 +1,20 @@
+<!--mine.wxml-->
+<view class="openVIP">
+  <view class="topImg">
+    <image src="/static/vip/VIP.png" mode=""/>
+  </view>
+  <view class="title">
+    <view class="left"></view>
+    <text>尊享10项特权</text>
+    <view class="right"></view>
+  </view>
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:key="id">
+      <image src="{{item.image}}" style="width: {{item.width}};height:{{item.height}}" ></image>
+      <text>{{item.content}}</text>
+    </view>
+  </view>
+  <text class="tips">一年劲省20000-40000元 (预估)
+  合同/律师函等1-3天极速完成</text>
+    <button class="button" open-type="contact" bindcontact="handleContact">联系客服开通</button>
+</view>

@@ -1,0 +1,65 @@
+/**index.wxss**/
+.attorneys {
+  min-height: 100vh;
+  background: linear-gradient(0deg, rgba(0,164,255,0.35) 0%, #00A4FF 100%);
+  padding-bottom: 42rpx;
+  box-sizing: border-box;
+}
+.attorneysBg{
+    width: 551rpx;
+    height: 791rpx;
+    margin: 36rpx auto 0;
+    display: block;
+}
+.mobiles{
+    width: 668rpx;
+    min-height: 514rpx;
+    margin: -40rpx auto 0;
+    display: block;
+    position: relative;
+}
+.mobiles image{
+    width: 668rpx;
+    min-height: 514rpx;
+    display: block;
+    margin: auto;
+    position: absolute;
+}
+.contacts{
+    width: 100%;
+    padding: 90rpx 0 0;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: inherit;
+}
+.contacts .item{
+    width: 100%;
+    line-height: 68rpx;
+}
+.item text{
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    font-size: 30rpx;
+color: #333333;
+}
+.item .name{
+    padding-left: 38rpx;
+    box-sizing: border-box;
+}
+.contacts .contactBox{
+    width: 90%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #E4F5FF;
+    border-radius: 40rpx;
+    margin: 28rpx auto;
+    font-size: 30rpx;
+    color: #333333;
+}
+.contactBox .name{
+    padding-left: 0;
+}
+.contacts > .item:nth-child(2){
+    margin-top: 10rpx;
+}

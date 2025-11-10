@@ -1,0 +1,13 @@
+<!--mine.wxml-->
+<view class="authLogin">
+  <view class="authCont">
+    <image class="logo" src="/static/logo.png"></image>
+    <view class="name">法颂契</view>
+    <view class="tips">
+      授权登陆协议，同意获取客户相关信息（如
+手机号、微信号）
+    </view>
+    <!-- <button class="button" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">同意授权登陆</button> -->
+    <button class="button" bindtap="authLogin">同意授权登陆</button>
+  </view>
+</view>

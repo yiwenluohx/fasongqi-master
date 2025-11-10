@@ -1,0 +1,34 @@
+/**index.wxss**/
+.fileDelivery {
+  min-height: 100vh;
+  background: #F5F7FA;
+  padding: 30rpx 0 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+.fileItem{
+    font-size: 28rpx;
+    color: #586471;
+    line-height: 28rpx;
+    background: #fff;
+    padding: 30rpx;
+    box-sizing: border-box;
+    margin-bottom: 20rpx;
+}
+.fileItem .item{
+    line-height: 40rpx;
+}
+.desc{
+    display: flex;
+}
+.intros{
+    flex: none;
+    width: 80%;
+    display: block;
+    height: 80rpx;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2; 
+}

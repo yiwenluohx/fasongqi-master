@@ -1,0 +1,62 @@
+<!--mine.wxml-->
+<view class="fileDeliveryDetail {{detail.status==5||detail.status==7?'padbot':''}}">
+  <view class="topCont">
+    <view class="left">
+        <view class="title">{{detail.shortDesc}}</view>
+        <text>{{detail.residueDateStr?detail.residueDateStr:''}}</text>
+        <text>{{detail.statusDesc}}</text>
+    </view>
+    <image src="/static/status.png" mode=""/>
+  </view>
+  <view class="serviceLog">
+    <view class="headerBox">
+        <text class="tit">服务信息</text>
+        <view class="nums">
+            <text class="time">{{detail.createTime}}</text>
+        </view>
+    </view>
+    <view class="infos">
+        <text>工单名称：{{detail.taskName}}</text>
+        <text>描述：{{detail.taskDesc}}</text>
+    </view>
+  </view>
+  <view class="logs">
+    <view class="headerBox">
+        <text class="tit">服务信息</text>
+    </view>
+    <view class="listBox">
+        <view class="itemBox" wx:for="{{detail.recordList}}" wx:key="index">
+            <view class="topBox">
+            <!-- 状态0:待分配,1: 已分配 2: 开始处理 3: 内部审核 4: 交付 5: 客户确认 6: 驳回 7: 服务完成 8:服务中止 -->
+                <view class="status" wx:if="{{index==0}}">
+                    <image src="/static/finish.png" mode=""/>
+                </view>
+                <view class="defaultStatus" wx:else="">
+                    <view class="circle"></view>
+                </view>
+                
+                <text class="name">{{item.kahunaName}}</text>
+                <text class="time">{{item.createTime}}</text>
+            </view>
+            <view class="tips">
+                {{item.statusDescText}}
+            </view>
+        </view>
+    </view>
+  </view>
+  <view class="botBtnBox" wx:if="{{detail.status == 5}}">
+      <view class="btn" bind:tap="preview">预览最新文件</view>
+      <view class="btn" bind:tap="reject">驳回</view>
+      <view class="btn" bind:tap="confirm">确认完成</view>
+  </view>
+  <view class="botBtnBox" wx:if="{{detail.status == 7}}">
+      <view class="btn" bind:tap="downloadFile">下载文件</view>
+  </view>
+  <view class="rejectBox" wx:if="{{isShowReject}}">
+    <textarea maxlength="-1"  bindinput="reasonInput" placeholder="驳回原因"></textarea>
+    <view class="btns">
+        <button bind:tap="cancel">取消</button>
+        <button bind:tap="rejectCommit">提交</button>
+    </view>
+  </view>
+</view>

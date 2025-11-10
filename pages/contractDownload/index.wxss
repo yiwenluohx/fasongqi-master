@@ -1,0 +1,146 @@
+/**index.wxss**/
+.templateDownload {
+  min-height: 100vh;
+  background: #F5F7FA;
+}
+.searchBox{
+    width: 100%;
+    height: 108rpx;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+.searchBox .search{
+    flex: 0 0 366rpx;
+    height: 68rpx;
+    background: #F6F8FA;
+    border-radius: 34rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 26rpx 0 20rpx;
+    box-sizing: border-box;
+    font-size: 26rpx;
+    color: #293D53;
+    margin-right: 30rpx;
+}
+.searchBox .search image{
+    width: 30rpx;
+    height: 30rpx;
+}
+.typeBox{
+    margin-right: 15rpx;
+}
+.picker{
+    width: 150rpx;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.picker .name{
+    flex: 0 0 104rpx;
+    font-size: 26rpx;
+    color: #293D53;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.triangledownfill{
+    width: 0rpx;
+    height: 0rpx;
+    border-width: 10rpx 10rpx 0;
+    border-style: solid;
+    border-color: #586471 transparent transparent;
+    margin-left: 8rpx;
+}
+.listBox{
+    width: 100%;
+    min-height: 1068rpx;
+    background: #FFFFFF;
+    padding: 30rpx;
+    box-sizing: border-box;
+    margin-top: 30rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.listBox .itemBox{
+    width: 329rpx;
+    height: 494rpx;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    box-shadow: 0rpx 0rpx 42rpx #F2F7FC;
+    margin: 0 0rpx 32rpx 0;
+}
+/* .listBox .itemBox:nth-child(2n){
+    margin-right: 0;
+} */
+.topDocBox{
+    width: 100%;
+    height: 278rpx;
+    position: relative;
+    overflow: hidden;
+
+}
+.topDocBox image{
+    width: 100%;
+    height: 278rpx;
+    border-radius: 20rpx 20rpx 0 0;
+}
+.topDocBox .downloadBtn{
+    position: absolute;
+    width: 144rpx;
+    line-height: 46rpx;
+    height: 46rpx;
+    background: #057DFF;
+    border-radius: 23rpx;
+    opacity: 0.8;
+    font-size: 22rpx;
+    color: #FFFFFF;
+    text-align: center;
+    bottom: 14rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.botInfos{
+    padding: 0 24rpx;
+    box-sizing: border-box;
+    font-size: 24rpx;
+    color: #586471;
+}
+.docName{
+    font-size: 28rpx;
+    color: #293D53;
+    line-height: 48rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.botInfos text{
+    display: block;
+    margin-top: 10rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.others{
+    display: flex;
+    justify-content: space-between;
+    font-size: 22rpx;
+color: #AAB1B9;
+margin-top: 15rpx;
+}
+.others :first-child{
+    font-size: 24rpx;
+    color: #DE3A32;
+    font-weight: bold;
+}
+.others :first-child ::before{
+    content: '￥';
+    font-size: 20rpx;
+    font-weight: normal;
+}

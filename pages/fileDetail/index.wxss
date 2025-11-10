@@ -1,0 +1,30 @@
+/**index.wxss**/
+.detailContent {
+  min-height: 100vh;
+  background: #F5F7FA;
+  padding: 30rpx 0 0;
+  box-sizing: border-box;
+}
+.detailBox{
+    width: 690rpx;
+    height: 1151rpx;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    margin: auto;
+    padding: 30rpx;
+    box-sizing: border-box;
+}
+.detailBox .title{
+    font-size: 28rpx;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+.detailBox .title::before{
+    width: 4rpx;
+    height: 28rpx;
+    content: '';
+    background: #057DFF;
+    display: inline-block;
+    margin-right: 17rpx;
+}

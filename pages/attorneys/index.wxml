@@ -1,0 +1,41 @@
+<!--mine.wxml-->
+<view class="attorneys">
+  <image src="/static/attorneyBg.png" mode="" class="attorneysBg"/>
+  <view class="mobiles">
+    <image src="/static/attorneysMobileBg.png" mode=""/>
+    <view class="contacts">
+        <view class="item">
+            <text class="name">律师姓名</text>
+            <text>联系方式</text>
+        </view>
+        <view class="item contactBox">
+            <text class="name">董景景</text>
+            <text>1903832252</text>
+        </view>
+        <view class="item contactBox">
+            <text class="name">王克俭</text>
+            <text>18736598750</text>
+        </view>
+        <view class="item contactBox">
+            <text class="name">白晴阳</text>
+            <text>15670663726</text>
+        </view>
+        <!-- <view class="item contactBox">
+            <text class="name">孙律师</text>
+            <text>13523675811</text>
+        </view>
+        <view class="item contactBox">
+            <text class="name">张律师</text>
+            <text>13598204591</text>
+        </view>
+        <view class="item contactBox">
+            <text class="name">王律师</text>
+            <text>15238052107</text>
+        </view>
+        <view class="item contactBox">
+            <text class="name">王律师</text>
+            <text>18697323957</text>
+        </view> -->
+    </view>
+  </view>
+</view>

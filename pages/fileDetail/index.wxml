@@ -1,0 +1,7 @@
+<!--mine.wxml-->
+<view class="detailContent">
+  <view class="detailBox">
+    <view class="title">文件预览</view>
+
+  </view>
+</view>

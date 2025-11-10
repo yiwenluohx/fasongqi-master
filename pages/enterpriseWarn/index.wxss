@@ -1,0 +1,7 @@
+/**index.wxss**/
+.aboutUs {
+  min-height: 100vh;
+  background: #F5F7FA;
+  padding: 30rpx 0 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,73 @@
+/**index.wxss**/
+.detailContent {
+    width: 100%;
+    min-height: 100vh;
+    background: #F5F7FA;
+    padding: 30rpx 0 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+.empty{
+  background: #F5F7FA;
+  width: 100%;
+  height: 30rpx;
+}
+.detailContent .bg{
+    width: 100%;
+    height: 1209rpx;
+    display: block;
+}
+.detailCont{
+    position: absolute;
+    width: 448rpx;
+    min-height: 520rpx;
+    background: #FFFFFF;
+    top: 464rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30rpx;
+    color: #293D53;
+    padding: 40rpx;
+    box-sizing: border-box;
+    line-height: 52rpx;
+}
+.button{
+    width: 630rpx;
+    height: 86rpx;
+    background: #057DFF;
+    box-shadow: 0rpx 2rpx 13rpx 0rpx rgba(27,71,118,0.53);
+    border-radius: 43rpx;
+    font-weight: 500;
+    font-size: 26rpx;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 86rpx;
+    margin: -31rpx auto;
+}
+.detailBox{
+  width: 100%;
+  background: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.detailBox .title{
+  font-weight: 800;
+  font-size: 34rpx;
+  color: #293D53;
+  line-height: 49rpx;
+}
+.other{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 26rpx;
+  color: #AAB1B9;
+  line-height: 49rpx;
+}
+.classify{
+  margin-right: 30rpx;
+}
+.descBox{
+  font-size: 30rpx;
+  color: #586471;
+  line-height: 55rpx;
+}

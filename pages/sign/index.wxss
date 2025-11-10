@@ -1,0 +1,274 @@
+/**index.wxss**/
+.signIn {
+  min-height: 100vh;
+  background: #F5F7FA;
+}
+
+.signIn image{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.content{
+  position: relative;
+}
+.content .title{
+  font-family: PangMenZhengDaoBiaoTiTiMianFeiBan-4;
+  font-weight: 400;
+  font-size: 48rpx;
+  color: #FFFFFF;
+  padding: 41rpx 79rpx 45rpx;
+  display: block;
+  box-sizing: border-box;
+}
+.down_nums{
+  display: block;
+  font-size: 30rpx;
+  color: #FFEADF;
+  padding: 0 0 30rpx 79rpx;
+  box-sizing: border-box;
+}
+.num{
+  font-weight: bold;
+  font-size: 42rpx;
+  color: #FFFFFF;
+  display: block;
+  padding: 0 0 39rpx 79rpx;
+  box-sizing: border-box;
+}
+.signCont{
+  width: 690rpx;
+  /* height: 747rpx; */
+  background: #FFFFFF;
+  box-shadow: 0rpx 13rpx 51rpx 3rpx rgba(240,109,79,0.31);
+  border-radius: 34rpx;
+  margin: auto;
+  padding: 51rpx 32rpx 32rpx;
+  box-sizing: border-box;
+}
+.signCont .tit{
+  font-weight: bold;
+  font-size: 30rpx;
+  color: #293D53;
+  text-align: center;
+}
+.signCont .tit text{
+  color: #FF5800;
+  font-weight: bold;
+}
+.signBoxs{
+  display: flex;
+  flex-wrap: wrap;
+}
+.boxItem{
+  position: relative;
+  width: 133rpx;
+  height: 187rpx;
+  overflow: hidden;
+  margin: 33rpx 31rpx 28rpx 0;
+}
+.signBoxs :nth-child(4){
+  margin-right: 0;
+}
+.boxItem image{
+  width: 133rpx;
+  height: 187rpx;
+  position: fixed;
+}
+.boxItem text{
+  width: 100%;
+  position: absolute;
+  top: 19rpx;
+  z-index: 9;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24rpx;
+  color: #293D53;
+}
+.boxItem .status{
+  position: absolute;
+  bottom: 12rpx;
+  width: 80rpx;
+  height: 28rpx;
+  background: #E8EAE9;
+  color: #586471;
+  border-radius: 14rpx;
+  font-size: 18rpx;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hasSign  text{
+  color: #fff !important;
+}
+.hasSign .status{
+  background: #E15043;
+  color: #FFFFFF;
+}
+.signInBtn{
+  width: 585rpx;
+  height: 80rpx;
+  background: linear-gradient(90deg, #FF5803 0%, #FF8D31 100%);
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-weight: bold;
+  font-size: 30rpx;
+  color: #FFFFFF;
+  margin: auto;
+}
+.hasSignBtn{
+  opacity: 0.6;
+}
+.signRules{
+  width: 100%;
+  padding: 36rpx 0 0rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #A4A4A4;
+  text-align: center;
+}
+
+.rulesContBox{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+.rulesCont{
+  width: 100%;
+  min-height: 830rpx;
+  background: #FFFFFF;
+  border-radius: 24rpx 24rpx 0rpx 0rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.topBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 97rpx;
+  font-size: 30rpx;
+  color: #AB7753;
+}
+.topBox .line{
+  width: 56rpx;
+  height: 8rpx;
+  background: linear-gradient(90deg, #F8F1E3 0%, #FCE2C1 100%);
+  border-radius: 0rpx 8rpx 0rpx 8rpx;
+  margin: 0 15rpx;
+}
+.topBox .rightLine{
+  background: linear-gradient(90deg, #F8F1E3 0%, #FCE2C1 100%);
+  border-radius: 8rpx 0rpx 8rpx 0rpx;
+}
+.rulesCont .rules{
+  width: 100%;
+  padding: 0 62rpx;
+  display: block;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #293D53;
+  line-height: 55rpx;
+  margin-top: 37rpx;
+}
+.knowBtn{
+  width: 585rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: linear-gradient(90deg, #FF5803 0%, #FF8D31 100%);
+  border-radius: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #FFFFFF;
+  margin: 70rpx auto 77rpx;
+}
+.closeModal{
+  position: absolute;
+  display: inline-block;
+  width: 42rpx;
+  height: 42rpx;
+  cursor: pointer;
+  right: 33rpx;
+  top: 14px;
+  z-index: 9;
+}
+.closeModal ::before, .closeModal ::after {
+  position: absolute;
+  left: 50%;
+  width: 4rpx;
+  height: 100%;
+  content: '';
+  transform: rotate(-45deg);
+  background: #586471;
+  z-index: 10;
+}
+.closeModal ::after {
+  transform: rotate(45deg);
+}
+
+.signSuccessMask{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+}
+.signSuccessBox{
+  width: 556rpx;
+  height: 780rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 9;
+}
+.signSuccessBox image{
+  width: 556rpx;
+  height: 780rpx;
+}
+.signSuccessBox .successBox{
+  position: absolute;
+  top: 336rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+  color: #293D53;
+}
+.successBox .text{
+  width: 100%;
+  font-weight: bold;
+  font-size: 42rpx;
+  color: #FF5B06;
+  text-align: center;
+  margin-bottom: 28rpx;
+}
+.successBox .success, .successBox .gets{
+  line-height: 49rpx;
+}
+.successBox .gets text{
+  font-size: 36rpx;
+  color: #FF5A05;
+  font-weight: bold;
+}
+.successBox .btn{
+  width: 333rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: linear-gradient(90deg, #FF5803 0%, #FF8D31 100%);
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  color: #FFFFFF;
+  margin: 28rpx auto;
+}
+.successBox .tips{
+  font-size: 24rpx;
+  color: #AAB1B9;
+}

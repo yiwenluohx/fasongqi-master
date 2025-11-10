@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/legalDepartment/index",
+    "pages/mine/index",
+    "pages/aboutUs/index",
+    "pages/sign/index",
+    "pages/vip/index",
+    "pages/authLogin/index",
+    "pages/fileDelivery/index",
+    "pages/fileDeliveryDetail/index",
+    "pages/serviceLog/index",
+    "pages/fileManage/index",
+    "pages/fileDetail/index",
+    "pages/newsList/index",
+    "pages/newsDetail/index",
+    "pages/contractDownload/index",
+    "pages/contractDetail/index",
+    "pages/attorneys/index",
+    "pages/lawsuitGuide/index",
+    "pages/lawsuitCost/index",
+    "pages/contractReview/index",
+    "pages/legalWriting/index",
+    "pages/enterpriseWarn/index",
+    "pages/IdVerification/index",
+    "pages/AIzixun/index",
+    "pages/jiance/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "法颂契",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#586471",
+    "selectedColor": "#057DFF",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/home1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/legalDepartment/index",
+        "iconPath": "static/tabbar/legal.png",
+        "selectedIconPath": "static/tabbar/legal1.png",
+        "text": "法务部"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "static/tabbar/mine.png",
+        "selectedIconPath": "static/tabbar/mine1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

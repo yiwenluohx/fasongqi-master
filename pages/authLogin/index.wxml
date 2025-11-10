@@ -1,0 +1,31 @@
+<!--mine.wxml-->
+<view class="authLogin">
+  <view class="authCont">
+    <image class="logo" src="/static/logo.png"></image>
+    <view class="name">法颂契</view>
+    <view class="tips">
+        获取头像昵称用于完善资料
+      <!-- 授权登陆协议，同意获取客户相关信息（如
+手机号、微信号） -->
+    </view>
+    <form class="userInfo">
+        <view class="infoBox">
+            <view class="left">
+                <text>头像：</text>
+                <image class="avatar" src="{{avatarUrl?avatarUrl:'/static/head.png'}}"></image>
+            </view>
+            
+            <button class="avatarBtn" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+            点击获取登录头像
+            </button> 
+        </view>
+        <view class="nicknameBox">
+            <text>昵称：</text>
+            <input type="nickname" class="nickname" value="{{nickname}}" bindblur="nicknameBlur" placeholder="请输入昵称"/>
+        </view>
+    </form>
+    
+    <!-- <button class="button" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">同意授权登陆</button> -->
+    <button class="button" bindtap="authLogin">登录</button>
+  </view>
+</view>

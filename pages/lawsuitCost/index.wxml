@@ -1,0 +1,66 @@
+<form>
+    <view class="text-bold padding bg-white">
+        填写诉讼费计算信息
+    </view>
+    <view class="cu-form-group ">
+        <view class="title">案件类型</view>
+        <picker bindchange="bindPickerChange" value="{{typeIndex}}" range-key="title" range="{{typeList}}">
+            <view class="picker">
+                {{typeList[typeIndex].title}}
+            </view>
+        </picker>
+    </view>
+    <view class="cu-form-group ">
+        <view class="title">是否涉及财产</view>
+
+        <switch bindchange="bindSwChange"></switch>
+    </view>
+    <view class="cu-form-group " wx:if="{{showCaichan}}">
+        <view class="title">涉及财产</view>
+        <input placeholder="财产金额" bindinput="caichanInput"></input>
+    </view>
+    <view class="grid col-2 text-center">
+        <view>
+            <button class="cu-btn   bg-blue" bindtap="doCalculation">计算</button>
+        </view>
+        <view> <button class="cu-btn   bg-orange" bindtap="doCalculation">重新计算</button></view>
+    </view>
+
+
+
+</form>
+<view class="text-bold padding bg-white margin-top">
+    填写诉讼费计算结果
+</view>
+<view class="cu-form-group ">
+    <view class="title">受理费</view>
+    <input placeholder="受理费" value="{{shoulifei}}"></input>
+</view>
+<!--view class="cu-form-group "  >
+    <view class="title">执行费</view>
+    <input placeholder="执行费"  value="{{zhixingfei}}"></input>
+  </view-->
+<view class="cu-form-group ">
+    <view class="title">保全费</view>
+    <input placeholder="保全费" value="{{baoquanfei}}"></input>
+</view>
+<view class="cu-form-group flex justify-start">
+    如果您对网上立案、上传材料有疑问，请
+    <button open-type="contact" style="width: auto;padding: 0;margin: 0; font-size: 28rpx;color: blue;line-height: inherit;background: none !important;">立即咨询</button>
+</view>
+
+<!--view class="text-bold padding bg-white margin-top">
+    其他收费标准
+  </view>
+  <view class="cu-form-group "  >
+		<view class="title">申请支付令</view>
+    <input placeholder="申请支付令" value="财产案件受理的1/3"></input>
+  </view>
+  <view class="cu-form-group "  >
+    <view class="title">申请公示催告</view>
+    <input placeholder="申请公示催告"  value="每件100元"></input>
+  </view>
+  <view class="cu-form-group "  >
+    <view class="title">申请确仲或撤仲</view>
+		<input placeholder="申请确仲或撤仲"  value="每件400元"></input>
+  </view-->

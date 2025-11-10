@@ -1,0 +1,17 @@
+<!--mine.wxml-->
+<view class="fileDelivery">
+  <view class="fileItem" wx:for="{{list}}" wx:key="taskId">
+    <view class="item">
+        租房合同：{{item.taskName}}
+    </view>
+    <view class="item">
+        处理时间：{{item.createTime}}
+    </view>
+    <view class="item desc">
+        <text>描述：</text>
+        <view class="intros">
+            {{item.taskDesc}}
+        </view>
+    </view>
+  </view>
+</view>

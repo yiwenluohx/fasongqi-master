@@ -1,0 +1,66 @@
+<!--mine.wxml-->
+<view class="signIn">
+  <image class="signBg" src="/static/signBg.png"></image>
+  <view class="content">
+    <text class="title">签到奖励下载次数</text>
+    <text class="down_nums">我的下载次数：</text>
+    <text class="num">{{downloadNum}}</text>
+    <view class="signCont">
+      <view class="tit">
+        您已经连续签到
+        <text>{{continueDays}}</text>
+        天
+      </view>
+      <view class="signBoxs">
+        <view wx:for="{{days}}" wx:key="index" class="boxItem {{item.hasSignIn ? 'hasSign':''}}">
+          <text>第{{index+1}}天</text>
+          <image src="{{item.hasSignIn ?'/static/hasSign.png' : '/static/noSign.png'}}"></image>
+          <view class="status" wx:if="{{index==2}}">下载+1</view>
+          <view class="status" wx:elif="{{index==4}}">下载+2</view>
+          <view class="status" wx:elif="{{index==6}}">下载+3</view>
+          <view class="status" wx:else>{{item.hasSignIn?'已签':'未签'}}</view>
+        </view>
+        <view class="signInBtn {{isSignToday?'hasSignBtn':''}}" bindtap="signInCli">立即签到</view>
+        <view class="signRules" bindtap="rulesCli">签到规则 ></view>
+      </view>
+    </view>
+    
+  </view>
+  <!-- 规则 -->
+  <view class="rulesContBox" wx:if="{{isShowRule}}">
+    <view class="rulesCont">
+      <view class="topBox">
+        <view class="line leftLine"></view>
+        <text>签到规则</text>
+        <view class="line rightLine"></view>
+      </view>
+      <text class="rules">1.每天只可签到1次，如签到中断，下次签到则从第1天开始计算。
+        2.连续签到3日、5日和7日所获得的下载文档次数分别是1次、2次和3次。
+        3.签到获得的下载次数可以用于不同类型和行业的合同免费下载。
+        4.若发现恶意签到的行为，法颂契有权取消下载次数，并取消签到资格。
+        *以上信息的最终解释权归法颂契所有
+      </text>
+      <view class="closeModal" bindtap="closeModal">
+        <view class="left"></view>
+      </view>
+      <view class="knowBtn" bindtap="closeModal">我知道了</view>
+    </view>
+  </view>
+  <!-- 签到成功 -->
+  <view class="signSuccessMask" wx:if="{{isShowSuccess}}">
+    <view class="signSuccessBox">
+      <image src="/static/signSuc.png"></image>
+      <view class="successBox">
+        <view class="text">签到成功</view>
+        <view class="success">恭喜您签到成功</view>
+        <view class="gets" wx:if="{{continueDays == 3 || continueDays == 5 || continueDays == 7}}">
+          获得
+          <text>1</text>
+          次下载次数
+        </view>
+        <view class="btn" bindtap="closeSuccessModal">我知道了</view>
+        <text class="tips">连续签到奖励更丰厚</text>
+      </view>
+    </view>
+  </view>
+</view>

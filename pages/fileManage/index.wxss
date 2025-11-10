@@ -1,0 +1,34 @@
+/**index.wxss**/
+.listContent {
+  min-height: 100vh;
+  background: #F5F7FA;
+  padding: 30rpx 0 0;
+  box-sizing: border-box;
+}
+.itemBox{
+    font-size: 28rpx;
+    color: #586471;
+    background: #fff;
+    padding: 30rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30rpx;
+}
+.itemBox .item{
+    line-height: 48rpx;
+}
+.itemBox .button{
+    width: 154rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    background: #057DFF;
+    border-radius: 28rpx;
+    font-size: 26rpx;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}

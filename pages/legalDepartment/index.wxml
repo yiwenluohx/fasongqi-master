@@ -1,0 +1,34 @@
+<!--legal.wxml"-->
+<view class="legal" wx:if="{{userInfo!=null && userInfo.isVip}}">
+  <view class="container">
+    <image class="banner" src="/static/fawu/banner.png"></image>
+    <view class="tabs">
+      <view class="tabsCont">
+      <view class="tab" wx:for="{{tabs}}" wx:key="id" bind:tap="tabClick" data-url="{{item.url}}" data-isLogin="{{item.isLogin}}">
+        <image src="{{item.image}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+    </view>
+  </view>
+</view>
+
+<view class="openVIP" wx:if="{{userInfo==null || !userInfo.isVip}}">
+  <view class="topImg">
+    <image src="/static/vip/VIP.png" mode=""/>
+  </view>
+  <view class="title">
+    <view class="left"></view>
+    <text>尊享10项特权</text>
+    <view class="right"></view>
+  </view>
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:key="id">
+      <image src="{{item.image}}" style="width: {{item.width}};height:{{item.height}}" ></image>
+      <text>{{item.content}}</text>
+    </view>
+  </view>
+  <text class="tips">一年劲省20000-40000元 (预估)
+  合同/律师函等1-3天极速完成</text>
+    <button class="button" open-type="contact" bindcontact="handleContact">联系客服开通</button>
+</view>

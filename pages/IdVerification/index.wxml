@@ -1,0 +1,57 @@
+<form>
+    <view class="text-bold padding bg-white">
+        被告身份核实
+    </view>
+    <view class="cu-form-group ">
+        <view class="title">被告人姓名:</view>
+        <input placeholder="请填写被告人姓名" name="input" value="{{needVerifyPerson}}" bindinput="nameInput"></input>
+    </view>
+    <view class="cu-form-group ">
+        <view class="title">出生日期:</view>
+        <picker mode="date" value="{{birthday}}" start="1900-01-01" end="{{nowDate}}" bindchange="bindDateChange">
+            <view class="picker">
+            {{birthday}}
+            </view>
+        </picker>
+    </view>
+    <view class="cu-form-group margin-top">
+        <view class="title">户籍所在地:</view>
+        <input placeholder="请填写户籍所在地" name="input" value="{{domicileAddress}}" bindinput="registerInput"></input>
+    </view>
+
+    <view class="cu-form-group margin-top">
+        <textarea maxlength="-1" bindinput="textareaAInput" placeholder="简述"></textarea>
+    </view>
+    <!-- <view class="cu-bar bg-white margin-top">
+        <view class="action">
+            图片上传
+        </view>
+        <view class="action">
+            {{imgList.length}}/4
+        </view>
+    </view>
+    <view class="cu-form-group">
+        <view class="grid col-4 grid-square flex-sub">
+            <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+                <image src='{{imgList[index]}}' mode='aspectFill'></image>
+                <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+                    <text class="cuIcon-close"></text>
+                </view>
+            </view>
+            <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+                <text class="cuIcon-cameraadd"></text>
+            </view>
+        </view>
+    </view>
+    <view class="cu-form-group">
+        <view class="title">合同文件</view>
+        <input placeholder="上传需要审查的合同" name="input" value="{{fileName}}"></input>
+        <button class='cu-btn bg-green shadow' style="width:80px" bindtap="doUploadFile">上传</button>
+    </view> -->
+
+</form>
+<view class=" text-center margin-top">
+    <view>
+        <button class="cu-btn   bg-blue " bindtap="doSubmit">提交</button>
+    </view>
+</view>

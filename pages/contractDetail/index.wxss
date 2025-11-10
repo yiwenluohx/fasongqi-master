@@ -1,0 +1,153 @@
+.contractDetail{
+    width: 100%;
+    min-height: 100vh;
+    background: #F5F7FA;
+    padding: 30rpx;
+    box-sizing: border-box;
+}
+.topBox{
+    width: 100%;
+    min-height: 190rpx;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    padding: 25rpx 29rpx;
+    display: flex;
+    align-items: center;
+    margin-bottom: 26rpx;
+}
+.topBox image{
+    flex: 0 0 104rpx;
+    height: 136rpx;
+    margin-right: 20rpx;
+}
+.infos{
+    flex: 1;
+}
+.infos .tit text:first-child{
+    width: 440rpx;
+    font-size: 32rpx;
+    color: #293D53;
+}
+.infos .tit text:last-child{
+    font-size: 20rpx;
+    color: #586471;
+    float: right;
+    line-height: 44rpx;
+}
+.downloadNum{
+    font-size: 24rpx;
+    color: #586471;
+    line-height: 52rpx;
+}
+.handleBox{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20rpx;
+    color: #586471;
+}
+.handleBox text{
+    font-size: 30rpx;
+    color: #DE3A32;
+    font-weight: bold;
+}
+.handleBox text ::before{
+    content: '¥';
+    display: inline;
+    font-weight: normal;
+    font-size: 22rpx;
+    margin-right: 5rpx;
+}
+.handleBox button{
+    width: 154rpx;
+    height: 54rpx;
+    line-height: 54rpx;
+    background: #057DFF;
+    border-radius: 28rpx;
+    font-size: 26rpx;
+    color: #FFFFFF;
+}
+
+.fileDetail{
+    width: 690rpx;
+    height: 1151rpx;
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    padding-top: 30rpx;
+    box-sizing: border-box;
+}
+.previewTit{
+    width: 100%;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    font-size: 28rpx;
+    color: #333333;
+    display: block;
+}
+.previewTit ::before{
+    width: 4rpx;
+    height: 28rpx;
+    background: #057DFF;
+    content: '';
+    display: inline-block;
+    margin-right: 17rpx;
+    vertical-align: middle;
+}
+.name{
+    width: 100%;
+    font-size: 30rpx;
+    color: #293D53;
+    text-align: center;
+    font-weight: bold;
+    line-height: 60rpx;
+    display: block;
+}
+.cover{
+    width: 100%;
+    height: 813rpx;
+}
+.fileDetail .bottomBox{
+    min-height: 161rpx;
+}
+.filterBox{
+    height: 112rpx;
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明白色背景 */
+    backdrop-filter: blur(1px); /* 模糊效果 */
+    margin-top: -112rpx;
+}
+.tips{
+    width: 100%;
+    font-size: 22rpx;
+    color: #057DFF;
+    margin-bottom: 28rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tips::before{
+    width: 46rpx;
+    height: 2rpx;
+    background: #057DFF;
+    content: '';
+    display: inline-block;
+    margin-right: 10rpx;
+}
+.tips::after{
+    width: 46rpx;
+    height: 2rpx;
+    background: #057DFF;
+    content: '';
+    display: inline-block;
+    margin-left: 10rpx;
+}
+.tips text{
+    color: var(--fontRed);
+}
+.bottomBox button{
+    width: 630rpx;
+    height: 86rpx;
+    line-height: 86rpx;
+    box-shadow: 0rpx 2rpx 13rpx 0rpx rgba(27,71,118,0.53);
+    border-radius: 43rpx;
+    margin: 0 auto !important;
+    font-size: 26rpx;
+}

@@ -1,0 +1,89 @@
+/**index.wxss**/
+.authLogin {
+  min-height: 100vh;
+  background: #F5F7FA;
+  padding: 30rpx 0 0;
+  box-sizing: border-box;
+}
+.authCont{
+  width: 100%;
+  height: calc(100vh - 30rpx);
+  background: #fff;
+  padding-top: 135rpx;
+}
+.logo{
+  width: 132rpx;
+  height: 132rpx;
+  margin: 0 auto 18rpx;
+  display: block;
+}
+.name{
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+  color: #293D53;
+  margin-bottom: 48rpx;
+}
+.tips{
+  padding: 0 100rpx;
+  font-size: 36rpx;
+  /* font-weight: bold; */
+  /* color: #586471; */
+  line-height: 56rpx;
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+.userInfo{
+    width: 630rpx !important;
+    margin: auto;
+    display: block;
+}
+.infoBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20rpx 0rpx;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #f1f1f1;
+}
+.left{
+    display: flex;
+    align-items: center;
+}
+.avatar{
+    width: 114rpx;
+    height: 114rpx;
+    margin-left: 21rpx;
+    border-radius: 50%;
+}
+.avatarBtn{
+    background: none;
+    color: #057DFF;
+    font-size: 22rpx;
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: auto !important;
+}
+.nicknameBox{
+    display: flex;
+    align-items: center;
+    line-height: 100rpx;
+    padding: 20rpx 0rpx;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #f1f1f1;
+}
+.nickname{
+  flex: 1;
+}
+.button{
+  width: 630rpx !important;
+  height: 86rpx;
+  line-height: 86rpx;
+  background: #057DFF;
+  border-radius: 43rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #FFFFFF;
+  margin: 100rpx auto !important;
+}

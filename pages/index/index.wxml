@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="home">
+  <view class="container">
+    <view class="banner">
+        <image src="../../static/banner.png" mode="aspectFill"></image>
+    </view>
+    <view class="notice">
+      <image src="../../static/notice.png"></image>
+      <swiper autoplay interval="5000" duration="4000" circular vertical> 
+        <swiper-item wx:for="{{tipsList}}" wx:key="index"> 
+            <text>恭喜{{item.industryTypeText}}{{item.customer}}依法追回欠款<text style="color: red;display: inline-block;font-size: 36rpx;margin: 0 5rpx;">{{item.refundMoney}}</text>万元
+            </text> 
+        </swiper-item> 
+      </swiper> 
+    </view>
+    
+    <view class="tabs">
+      <view class="tab" wx:for="{{tabs}}" wx:key="id" bindtap="tabClick" data-title="{{item.title}}" data-url="{{item.url}}" data-id="{{item.id}}">
+        <image src="{{item.image}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+    <view class="advCont">
+      <image src="/static/adv.png"></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<!--mine.wxml-->
+<view class="contractDetail">
+  <view class="topBox">
+    <image src="{{base+detail.image}}" mode=""/>
+    <view class="infos">
+        <view class="tit">
+            <text>{{detail.templateName}}</text>
+            <text>共{{detail.totalPage}}页</text>
+        </view>
+        <text class="downloadNum">{{detail.downNum}}次下载</text>
+        <view class="handleBox">
+            <view>
+                <text>{{detail.price}}</text>
+                （会员免费下载）
+            </view>
+            
+            <button bind:tap="downloadDocDisclaimers">下载文档</button>
+        </view>
+    </view>
+  </view>
+  <view class="fileDetail">
+    <text class="previewTit">文档预览</text>
+    <text class="name">{{detail.templateName}}</text>
+    <image class="cover" src="{{base+detail.allowImage}}" mode=""/>
+    <view class="bottomBox">
+        <view class="filterBox"></view>
+        <view class="tips">试读结束，剩余 <text>1</text> 页未读，请下载后查阅</view>
+        <button bind:tap="downloadDoc">￥{{detail.price}}下载文档</button>
+    </view>
+  </view>
+</view>

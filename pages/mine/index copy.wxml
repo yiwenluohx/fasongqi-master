@@ -1,0 +1,53 @@
+<!--mine.wxml-->
+<view class="mine">
+  <view class="top_user">
+    <view class="left" catchtap="authLoginCli">
+      <image class="head" src="{{userInfo?userInfo.avatar:'/static/head.png'}}" catchtap="authLoginCli"></image>
+      <view class="info">
+        <view class="names" >
+          <text>{{userInfo?userInfo.nickName:'未设置昵称'}}</text>
+          <image src="/static/vip.png" wx:if="{{userInfo.isVip}}"></image>
+        </view>
+        <view class="phone">
+          <image src="/static/phone.png"></image>
+          <text>{{userInfo.mobile?userInfo.mobile:'未绑定手机号'}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="sign" bindtap="signInCli">
+      <image src="/static/sign.png"></image>
+    </view>
+  </view>
+  <view class="openVip" bindtap="openVipCli">
+    <image src="/static/openvip.png"></image>
+  </view>
+  <view class="contents">
+    <view class="content1">
+      <view class="cont" wx:for="{{content1}}" wx:key="id" bindtap="handleClick" data-url="{{item.url}}" data-islogin="{{item.isLogin}}">
+        <image src="{{item.image}}"></image>
+        <text>{{item.title}}</text>
+        <text class="lg text-gray cuIcon-right" style="float: right;"></text>
+      </view>
+    </view>
+    <view class="content2">
+      <view class="cont" wx:for="{{content2}}" wx:key="id" bindtap="handleClick" data-url="{{item.url}}" data-islogin="{{item.isLogin}}" data-mobile="{{item.mobile}}">
+        <image src="{{item.image}}"></image>
+        <text>{{item.title}}</text>
+        <text class="lg text-gray cuIcon-right" style="float: right;"></text>
+      </view>
+    </view>
+  </view>
+  <!-- 授权手机号弹框 -->
+  <view class="authPhoneModal" wx:if="{{bindPhone}}">
+      <view class="bindPhoneCont">
+        <view class="titlebox">绑定手机号码</view>
+        <view class="bindBox">
+            <button class="bindPhoneBox"
+        open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+                <image src="/static/phone1.png"></image>
+                <text>绑定手机号码</text>
+            </button>
+        </view>
+      </view>
+  </view>
+</view>
